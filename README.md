@@ -65,6 +65,7 @@ $respondr.saveContact({
   phone: "4080099281",
   company: "XYZ Corp"
 });
+```
 
 ## Tracking Actions
 Tracking actions is easy with angular-respondr. There are currently 11 supported actions.
