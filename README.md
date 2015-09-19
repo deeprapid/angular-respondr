@@ -42,6 +42,7 @@ $respondr.send({
   data: {                           // optional
     field1: "XXXXXXXX",
     field2: 'YYYYYYYY'
+  }
 }).then(function(err, body) {
   if (err) {
     console.log("Error:");
