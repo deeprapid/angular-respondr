@@ -30,19 +30,19 @@ angular.module('angular-respondr', [])
     },
 
     trackCategoryView: function (category) {
-	   _raq.push(['trackCategoryView', category]); 
+	  _raq.push(['trackCategoryView', category]); 
     },
 
     trackProductView: function (product) {
       _raq.push(['trackProductView', product]); 
-    },
+    }
 
     trackEvent: function (evt) {
       _raq.push(['trackEvent', evt]);
     },
 
     addEcommerceItem: function (item) {
-      _raq.push(['addEcommerceItem', item]);
+      _paq.push(['addEcommerceItem', item]);
     },
 
     updateEcommerceItem: function (item) {
