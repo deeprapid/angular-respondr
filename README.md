@@ -16,8 +16,8 @@ Add angular-respondr as a module depenency.
 angular.module('myModule', ['angular-respondr']);
 ```
 
-### Include respondr analytics and angular-respondr in your index page
-The final step is to add angular-respondr and respondr analytics to your index page:
+### Include angular-respondr in your index page:
+The final step is to add angular-respondr and its dependencies to your index page. angular-respondr also requires that you include Respondr Analytics, as follows:
 
 ```
 <script type="text/javascript">
@@ -31,6 +31,8 @@ _raq.push(["trackSession", "---paste your siteId here---"]);
 </script>
 <script src="bower_components/angular-respondr/respondr.js"></script>
 ```
+
+This step assumes that AngularJS is also included somewhere above angular-respondr. 
 
 ## Sending Respondrs
 The send() function takes a respondr object as an input parameter and returns a promise.
@@ -51,7 +53,6 @@ $respondr.send({
     console.log("Message successfully sent!");
   }
 });
-
 ```
 
 ## Saving Contacts
