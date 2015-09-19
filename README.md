@@ -17,7 +17,7 @@ angular.module('myModule', ['angular-respondr']);
 ```
 
 ### Include angular-respondr in your index page:
-The final step is to add angular-respondr and its dependencies to your index page. angular-respondr also requires that you include Respondr Analytics, as follows:
+The final step is to add angular-respondr to your index page. angular-respondr also requires that you include Respondr Analytics, as follows:
 
 ```
 <script type="text/javascript">
