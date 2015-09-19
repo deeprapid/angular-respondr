@@ -1,0 +1,26 @@
+{
+  "name": "angular-respondr",
+  "version": "1.0.0",
+  "authors": [
+    "Respondr Inc. <developers@respondr.io>"
+  ],
+  "description": "Respondr Bower component for Angular",
+  "main": "angular-respondr.js",
+  "keywords": [
+    "marketing",
+    "automation",
+    "CRM",
+    "autorespondr",
+    "email"
+  ],
+  "license": "MIT",
+  "homepage": "www.respondr.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
