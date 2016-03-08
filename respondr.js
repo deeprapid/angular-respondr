@@ -8,7 +8,7 @@ angular.module('angular-respondr', [])
     send: function (respondr) {
       var q = $q.defer();
       $http.post(
-      	"https://9axdd8x726.execute-api.us-east-1.amazonaws.com/prod/send",
+      	"https://messaging.respondr.io/send",
       	respondr
       ).success(function(response) {
         q.resolve(response);
@@ -35,7 +35,7 @@ angular.module('angular-respondr', [])
 
     trackProductView: function (product) {
       _raq.push(['trackProductView', product]); 
-    }
+    },
 
     trackEvent: function (evt) {
       _raq.push(['trackEvent', evt]);
