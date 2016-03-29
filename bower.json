@@ -5,7 +5,7 @@
     "Respondr Inc. <developers@respondr.io>"
   ],
   "description": "Respondr Bower component for Angular",
-  "main": "angular-respondr.js",
+  "main": "respondr.min.js",
   "keywords": [
     "marketing",
     "automation",
