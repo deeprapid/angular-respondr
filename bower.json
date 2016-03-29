@@ -1,11 +1,11 @@
 {
   "name": "angular-respondr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "Respondr Inc. <developers@respondr.io>"
   ],
   "description": "Respondr Bower component for Angular",
-  "main": "respondr.min.js",
+  "main": "respondr.js",
   "keywords": [
     "marketing",
     "automation",
