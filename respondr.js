@@ -7,6 +7,17 @@ angular.module('angular-respondr', [])
 .service('$respondr', ['$http', '$q', function($http, $q) {
 
   var siteId;
+  var selections = [];
+
+  function urlParams(query) {
+    var params = '';
+      var i = 0;
+      for (var key in query) {
+        params += (i > 0) ? '&' + key + '=' + query[key] : key + '=' + query[key];
+        i += 1;
+      }
+      return params;
+  }
 
   return {
     send: function (respondr) {
@@ -47,7 +58,7 @@ angular.module('angular-respondr', [])
     },
 
     trackProductView: function (product) {
-      _raq.push(['trackProductView', product]); 
+      _raq.push(['trackProductView', product]);
     },
 
     trackEvent: function (evt) {
@@ -70,17 +81,30 @@ angular.module('angular-respondr', [])
       _raq.push(['trackEcommerceOrder', order]);
     },
 
-    getRecommendations: function(query) {
-      query.siteId = siteId;
+    selectItem: function(item) {
+      selections.push(item);
+    },
+
+    getSelections: function() {
+      return selections;
+    },
+
+    getItem: function(query) {
       var q = $q.defer();
-      var params = '';
-      var i = 0;
-      for (var key in query) {
-        params += (i > 0) ? '&' + key + '=' + query[key] : key + '=' + query[key];
-        i += 1;
-      }
       $http.get(
-        "https://brain.respondr.io/engine/query?" + params
+        "http://brain.respondr.io/recommendation/getItem?" + urlParams(query)
+      ).success(function(response) {
+        q.resolve(response);
+      }).error(function(err) {
+        q.reject(err);
+      });
+      return q.promise;
+    },
+
+    getRecommendations: function(query) {
+      var q = $q.defer();
+      $http.get(
+        "http://brain.respondr.io/recommendation/query?" + urlParams(query)
       ).success(function(response) {
         q.resolve(response);
       }).error(function(err) {
