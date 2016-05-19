@@ -80,7 +80,7 @@ angular.module('angular-respondr', [])
         i += 1;
       }
       $http.get(
-        "https://brain.respondr.io/engine/query?" + params
+        "https://brain.respondr.io/recommendation/query?" + params
       ).success(function(response) {
         q.resolve(response);
       }).error(function(err) {
